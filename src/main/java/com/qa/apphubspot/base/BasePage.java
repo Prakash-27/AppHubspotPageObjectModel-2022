@@ -24,6 +24,7 @@ public class BasePage {
 			if(prop.getProperty("headless").equals("yes")) {
 				ChromeOptions co = new ChromeOptions();
 				co.addArguments("--headless");
+				//co.setHeadless(true);
 				driver = new ChromeDriver(co);
 			} else {
 				driver = new ChromeDriver();
@@ -35,6 +36,7 @@ public class BasePage {
 				fb.addCommandLineOptions("--headless");
 				FirefoxOptions fo = new FirefoxOptions();
 				fo.setBinary(fb);
+				//fo.setHeadless(true);
 				driver = new FirefoxDriver(fo);
 			} else {
 				driver = new FirefoxDriver();
